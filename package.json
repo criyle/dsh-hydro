@@ -1,0 +1,118 @@
+{
+  "name": "dsh-hydro",
+  "version": "0.1.0",
+  "description": "HydroOJ operations and site-management plugin for DeepSeek Harness: SSH install/upgrade, monitoring, Caddy/MongoDB/Judge, embedded Hydro pages, and AI-assisted problem/contest/community workflows.",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.png"
+  },
+  "files": [
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "cordis.patch.yml",
+    "docs/design.md",
+    "docs/screenshots",
+    "icon.png",
+    "lib",
+    "locale",
+    "dsh-market"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.1",
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "npm run build:host && npm run build:client",
+    "build:host": "node scripts/build-host.mjs",
+    "build:client": "node scripts/build-client.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.client.json --noEmit",
+    "prepack": "npm run build",
+    "verify:client": "node test/client/verify-client.mjs",
+    "test:screenshot": "node test/client/screenshot.mjs",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "mongodb": "^7.0.0",
+    "semver": "^7.7.3",
+    "ssh2": "^1.17.0",
+    "ws": "^8.18.3"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.1.0 <5.0.0",
+    "@deepseek-ai/dsh-tools": ">=0.2.2-rc.1",
+    "@deepseek-ai/schemastery": ">=3.19.0 <4.0.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.1.0",
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.1",
+    "@deepseek-ai/schemastery": "3.19.0",
+    "@types/node": "^24.13.3",
+    "@types/semver": "^7.7.1",
+    "@types/ssh2": "^1.15.5",
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.25.2",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.4",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@deepseek-ai/dsh-skill": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-util-values": "0.2.2-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "criyle (https://github.com/criyle)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/criyle/dsh-hydro.git"
+  },
+  "homepage": "https://github.com/criyle/dsh-hydro#readme",
+  "bugs": {
+    "url": "https://github.com/criyle/dsh-hydro/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "deepseek",
+    "hydrooj",
+    "online-judge",
+    "ssh",
+    "mcp",
+    "plugin",
+    "dsh-plugin",
+    "dsh-plugin-market"
+  ]
+}

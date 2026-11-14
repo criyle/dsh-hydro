@@ -1,0 +1,16 @@
+Third-party assets
+==================
+
+Hydro plugin icon
+-----------------
+File: icon.png
+Source: Hydro packages/ui-default/public/favicon.ico
+        https://github.com/hydro-dev/Hydro/blob/master/packages/ui-default/public/favicon.ico
+Copyright: Hydro contributors
+License: GNU Affero General Public License v3.0
+         https://github.com/hydro-dev/Hydro/blob/master/LICENSE
+
+The ICO was converted to PNG for DSH's plugin icon format. It is included only
+as the dsh-hydro plugin icon with attribution; no Hydro source code is included
+in this package. If you redistribute this package, keep this notice and the
+upstream license/attribution.

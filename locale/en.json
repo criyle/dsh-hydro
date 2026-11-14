@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Hydro Ops",
+    "description": "Operate a remote HydroOJ over SSH: install, status, upgrades, Mongo/oplog, domain config, and agent-driven problem/contest authoring."
+  }
+}

@@ -1,0 +1,21 @@
+node_modules/
+lib/
+dist/
+coverage/
+*.tgz
+*.log
+.DS_Store
+.vitest/
+.esbuild/
+
+# local-only test credentials / notes
+.local/
+
+# local acceptance evidence and real host secrets must never be committed
+docs/e2e/
+test/e2e/
+.env
+.env.*
+*.pem
+*.key
+docs/acceptance.md

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Hydro 运维",
+    "description": "通过 SSH 运维远程 HydroOJ：安装、状态、版本升级、Mongo/oplog、域配置，以及用 agent 出题出比赛。"
+  }
+}

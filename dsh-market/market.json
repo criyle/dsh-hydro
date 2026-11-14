@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "displayName": {
+    "zh": "Hydro 运维",
+    "en": "Hydro Ops"
+  },
+  "developer": {
+    "name": "criyle",
+    "url": "https://github.com/criyle"
+  },
+  "summary": {
+    "zh": "在 DSH 中管理远端 HydroOJ：安装升级、监控排障、站点编辑与 AI 出题。",
+    "en": "Operate a remote HydroOJ from DSH: setup, monitoring, site editing and AI-assisted authoring."
+  },
+  "description": {
+    "zh": "通过 SSH 管理远端 Hydro 服务器：安装/升级、插件与 Nix/Caddy/PM2/MongoDB/Judge、实时指标与排障；支持站点账号、域/题目/比赛/社区的内嵌 Hydro 页面和 AI 编辑助手。",
+    "en": "Manage a remote Hydro server over SSH: install/upgrade, plugins and Nix/Caddy/PM2/MongoDB/Judge, live metrics and troubleshooting; embedded Hydro pages for domains/problems/contests/community with AI authoring assistance."
+  },
+  "homepage": "https://github.com/criyle/dsh-hydro",
+  "license": "MIT",
+  "logo": "icon.png",
+  "screenshots": [
+    {
+      "url": "docs/screenshots/overview.png",
+      "caption": {
+        "zh": "总览：指标、状态与告警",
+        "en": "Overview: metrics, status and warnings"
+      }
+    },
+    {
+      "url": "docs/screenshots/community.png",
+      "caption": {
+        "zh": "社区互动与 AI 回复草稿",
+        "en": "Community discussions and AI reply drafts"
+      }
+    },
+    {
+      "url": "docs/screenshots/pm2.png",
+      "caption": {
+        "zh": "PM2 进程与组件状态",
+        "en": "PM2 processes and components"
+      }
+    }
+  ]
+}

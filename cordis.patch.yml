@@ -1,0 +1,8 @@
+# dsh-hydro bundle patch: inserts this plugin into a profile's layer stack.
+#
+# `name` is the bare package name so that the client module system attaches the
+# package's browser half (`dsh.client`) to this row. Keep the id stable: users and
+# the plugin manager target it in `cordis.patch.yml` overrides.
+- insert:
+    - id: dsh-hydro
+      name: dsh-hydro
